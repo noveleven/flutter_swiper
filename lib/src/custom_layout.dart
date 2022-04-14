@@ -288,7 +288,8 @@ abstract class TransformBuilder<T> {
 
 class ScaleTransformBuilder extends TransformBuilder<double> {
   final Alignment alignment;
-  ScaleTransformBuilder({List<double>? values, this.alignment: Alignment.center})
+  ScaleTransformBuilder(
+      {List<double>? values, this.alignment: Alignment.center})
       : super(values: values);
 
   Widget build(int i, double animationValue, Widget widget) {
@@ -339,8 +340,7 @@ class CustomLayoutOption {
   final int startIndex;
   final int? stateCount;
 
-  CustomLayoutOption({this.stateCount, required this.startIndex})
-      : assert(startIndex != null, stateCount != null);
+  CustomLayoutOption({this.stateCount, required this.startIndex});
 
   CustomLayoutOption addOpacity(List<double> values) {
     builders.add(new OpacityTransformBuilder(values: values));
@@ -381,8 +381,7 @@ class _CustomLayoutSwiper extends _SubSwiper {
       int? itemCount,
       Axis? scrollDirection,
       SwiperController? controller})
-      : assert(option != null),
-        super(
+      : super(
             loop: loop,
             onIndexChanged: onIndexChanged,
             itemWidth: itemWidth,
