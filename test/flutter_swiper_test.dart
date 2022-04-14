@@ -87,12 +87,12 @@ void main() {
       },
       itemCount: 10,
       pagination: SwiperCustomPagination(
-          builder: (BuildContext context, SwiperPluginConfig config) {
+          builder: (BuildContext context, SwiperPluginConfig? config) {
         return ConstrainedBox(
           child: Row(
             children: <Widget>[
               Text(
-                "${titles[config.activeIndex]} ${config.activeIndex + 1}/${config.itemCount}",
+                "${titles[config!.activeIndex!]} ${config.activeIndex! + 1}/${config.itemCount}",
                 style: TextStyle(fontSize: 20.0),
               ),
               Expanded(

@@ -6,8 +6,6 @@ import 'src/ExampleCustom.dart';
 import 'src/config.dart';
 import 'src/ExampleSwiperInScrollView.dart';
 
-import 'package:flutter/cupertino.dart';
-
 void main() => runApp(new MyApp());
 
 class MyApp extends StatelessWidget {
@@ -117,7 +115,6 @@ class ExampleHorizontal extends StatelessWidget {
               fit: BoxFit.fill,
             );
           },
-
           indicatorLayout: PageIndicatorLayout.COLOR,
           autoplay: true,
           itemCount: images.length,

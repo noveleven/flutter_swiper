@@ -1,4 +1,8 @@
 
+## [2.0.0] - [2022/04/15]
+
+ * Fix null safety support
+
 ## [1.1.5] - [2019/03/10]
 
  * Fix findRenderObject is null
